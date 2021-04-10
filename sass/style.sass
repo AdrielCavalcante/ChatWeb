@@ -1,0 +1,341 @@
+@use 'variables'
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap')
+    
+//Sempre executar: sass --watch sass/style.sass:css/style.css
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    text-decoration: none
+    font-family: "Poppins", sans-serif
+
+body
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 100vh
+    background: #F7F7F7
+
+.wrapper
+    background: variables.$Cor-primaria
+    width: 500px
+    border-radius: 16px
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), 0 32px 64px -48px rgba(0,0,0,0.5)
+
+
+// Formulários
+.form
+    padding: 25px 30px
+
+    header
+        font-size: 25px
+        font-weight: 600
+        padding-bottom: 10px
+        border-bottom: 1px solid #E6E6E6
+    
+    form
+        margin: 20px 0
+
+        .error-txt
+            color: #721C24
+            background: #f8D7DA
+            padding: 8px 10px
+            text-align: center
+            border-radius: 5px
+            margin-bottom: 10px
+            border:  1px solid #F5C6CB
+            display: none
+
+        .name-details
+            display: flex
+
+            .field:first-child
+                margin-right: 10px
+            .field:last-child
+                margin-left: 10px
+
+        .field
+            display: flex
+            flex-direction: column
+            margin-bottom: 10px
+            position: relative
+
+            label
+                margin-bottom: 2px
+
+            input
+                outline: none
+
+            i
+                position: absolute
+                right: 15px
+                color: #CCC
+                font-size: 20px
+                top: 70%
+                transform: translateY(-50%)
+                cursor: pointer
+
+                &.active::before
+                    content: "\f070"
+                    color: variables.$Cor-secundaria
+
+        .input
+
+            input
+                height: 40px
+                width: 100%
+                font-size: 16px
+                padding: 0 10px
+                border: 1px solid #CCC
+                border-radius: 5px
+
+            .inputSenha
+                width: 90%
+
+        .image
+            
+            input
+                font-size: 17px
+
+        .button
+
+            input
+                margin-right: 13px
+                height: 45px
+                border: none
+                font-size: 17px
+                font-weight: 500
+                background: variables.$Cor-secundaria
+                color: variables.$Cor-primaria
+                border-radius: 5px
+                cursor: pointer
+
+    .link
+        text-align: center
+        margin: 10px 0
+        font-size: 17px
+
+        a
+            color: variables.$Cor-secundaria
+
+            &:hover
+                text-decoration: underline
+
+// Área de usuários
+.wrapper img
+    object-fit: cover
+    border-radius: 50%
+    
+.users
+    padding: 25px 30px
+
+    header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        border-bottom: 1px solid #E6E6E6
+        padding-bottom: 20px
+
+        .logout
+            color: variables.$Cor-primaria
+            padding: 7px 15px
+            font-size: 17px
+            border-radius: 5px
+            background: variables.$Cor-secundaria
+
+    .search
+        margin: 20px 0
+        display: flex
+        align-items: center
+        justify-content: space-between
+        position: relative
+
+        .text
+            font-size: 18px
+
+        input
+            position: absolute
+            height: 42px
+            width: calc(100% - 50px)
+            border: 1px solid #CCC
+            padding: 0 13px
+            font-size: 16px
+            border-radius: 5px 0 0 5px
+            outline: none
+            opacity: 0
+            pointer-events: none
+            transition: all 0.3s ease
+
+            &.active
+                opacity: 1
+                pointer-events: auto
+
+        button
+            width: 47px
+            height: 42px
+            border: none
+            outline: none
+            color: variables.$Cor-secundaria
+            background: variables.$Cor-primaria
+            border-radius: 0 5px 5px 0
+            cursor: pointer
+            font-size: 17px
+            transition: all 0.2s ease
+
+            &.active
+                color: variables.$Cor-primaria
+                background: variables.$Cor-secundaria
+
+                i::before
+                    content: "\f00d"
+
+:is(.users, .users-list)
+    .content
+        display: flex
+            
+        img
+            height: 50px
+            width: 50px
+
+    .details
+        margin-left: 15px
+        color: #000
+
+        span
+            font-size: 18px
+            font-weight: 500
+
+.users-list
+    max-height: 350px
+    overflow-y: auto
+
+    &::-webkit-scrollbar
+        width: 0px
+
+    a
+        display: flex
+        align-items: center
+        justify-content: space-between
+        border-bottom: 1px solid #E6E6E6
+        padding-bottom: 20px
+        padding-right: 15px
+        margin-bottom: 15px
+        page-break-after: 10px
+        border-bottom-color: #F1F1F1
+
+        &:last-child
+            border: none 
+            margin-bottom: 0px
+
+        .content
+            display: flex
+         
+            img
+                height: 40px
+                width: 40px
+        
+            p
+                color: #67676A
+
+        .status-dot
+            font-size: 12px
+            color: #468669
+            
+            //Quando offline, costuma-se usar esse nome para class
+            &.offline
+                color: #CCC
+
+//Área do chat
+
+.chat-area
+
+    header
+        display: flex
+        align-items: center
+        padding: 18px 30px
+
+        img
+            height: 45px
+            width: 45px
+            margin: 0 15px
+
+        .back-icon
+            font-size: 18px
+            color: variables.$Cor-secundaria
+
+        span
+            font-size: 17px
+            font-weight: 500
+    
+    .typing-area
+        padding: 18px 30px
+        display: flex
+        justify-content: space-between
+
+        input
+            height: 45px
+            width: calc(100% - 58px)
+            font-size: 17px
+            border: 1px solid #CCC
+            padding: 0 13px
+            border-radius: 5px 0 0 5px
+            outline: none
+
+        button
+            width: 55px
+            outline: none
+            border: none
+            background: variables.$Cor-secundaria
+            color: variables.$Cor-primaria
+            font-size: 19px
+            cursor: pointer
+            border-radius: 0 5px 5px 0
+.chat-box
+    height: 450px
+    background: #F7F7F7
+    overflow-y: auto
+    padding: 10px 30px 20px 30px
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),inset 0 -32px 32px -32px rgb(0 0 0 / 5%)  
+
+    &::-webkit-scrollbar
+        width: 0px
+
+    .chat
+        margin: 15px 0
+
+        p
+            word-wrap: break-word
+            padding: 8px 16px
+            box-shadow: 0 0 32px rgb(0 0 0 / 8%), 0 16px 16px -16px rgb(0 0 0 / 10%)
+
+    .outgoing
+        display: flex
+
+        .details
+            margin-left: auto
+            max-width: calc(100% - 130px)
+            
+            p
+                background: variables.$Cor-secundaria
+                color: variables.$Cor-primaria
+                border-radius: 18px 18px 0 18px
+            
+    .incoming
+        display: flex
+        align-items: flex-end
+
+        img
+            height: 35px
+            width: 35px
+
+        .details
+            margin-left: 10px
+            margin-right: auto
+            max-width: calc(100% - 130px)
+
+            p
+                background: variables.$Cor-primaria
+                color: variables.$Cor-secundaria
+                border-radius: 18px 18px 18px 0
