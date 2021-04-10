@@ -11,7 +11,7 @@
 - [x] Parte front-end.
 - [x] Ajax
 - [ ] Parte back-end.
-- [ ] Responsividade.
+- [x] Responsividade.
 
 #### Por enquanto é possível acessar todas as páginas. 
 #### Caminho: Clicar no botão do login.html, clicando na área da mensagem, você tem acesso ao chat.html
