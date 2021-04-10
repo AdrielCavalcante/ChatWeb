@@ -35,7 +35,8 @@
                     </div>
                     <div class="field image">
                         <label>Selecione uma imagem:</label>
-                        <input type="file">
+                        <input type="file" id="selectedFile" style="display: none;" />
+                        <input type="button" value="Escolha uma imagem" onclick="document.getElementById('selectedFile').click();" />
                     </div>
                     <div class="field button">
                         <input type="submit" value="Acessar o chat">
