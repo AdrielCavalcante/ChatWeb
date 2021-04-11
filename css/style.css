@@ -119,6 +119,7 @@ body {
 .wrapper img {
   object-fit: cover;
   border-radius: 50%;
+  width: 50px;
 }
 
 .users {
