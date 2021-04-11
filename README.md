@@ -6,6 +6,12 @@
 ### Projeto hospedado no: ![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github)
 ### Editor de texto usado: ![VSCode](http://img.shields.io/badge/-VS%20Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=ffffff)
 
+#### Objetivos:
+- [x] Parte front-end.
+- [x] Ajax
+- [ ] Parte back-end.
+- [x] Responsividade.
+
 #### Por enquanto é possível acessar todas as páginas. 
 #### Caminho: Clicar no botão do login.html, clicando na área da mensagem, você tem acesso ao chat.html
 
