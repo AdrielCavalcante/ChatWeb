@@ -1,6 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
----
-permalink: /index.html
----
+*.php linguist-detectable=false
+*.php linguist-language=HTML
