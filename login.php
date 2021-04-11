@@ -10,20 +10,10 @@
 </head>
 <body>
     <div class="wrapper">
-        <section class="form signup">
+        <section class="form login">
             <header>Chat em tempo real</header>
-            <form action="#">
+            <form action="#" method="POST">
                 <div class="error-txt">Isso é uma mensagem de erro!</div>
-                <div class="name-details">
-                    <div class="field input">
-                        <label>Primeiro nome:</label>
-                        <input type="text" placeholder="Seu Primeiro nome">
-                    </div>
-                    <div class="field input">
-                        <label>Último nome:</label>
-                        <input type="text" placeholder="Seu Último nome">
-                    </div>
-                </div>
                     <div class="field input">
                         <label>Endereço de E-mail:</label>
                         <input type="email" placeholder="Digite seu E-mail">
@@ -33,21 +23,15 @@
                         <input type="password" class="inputSenha" placeholder="Digite sua senha">
                         <i class="fas fa-eye"></i>
                     </div>
-                    <div class="field image">
-                        <label>Selecione uma imagem:</label>
-                        <input type="file" id="selectedFile" style="display: none;" />
-                        <input type="button" value="Escolha uma imagem" onclick="document.getElementById('selectedFile').click();" />
-                    </div>
                     <div class="field button">
                         <input type="submit" value="Acessar o chat">
                     </div>
             </form>
-            <div class="link">Já está registrado? <a href="login.html">Logue-se agora</a></div>
+            <div class="link">Não possui registro? <a href="index.php">Registre-se agora</a></div>
         </section>
     </div>
 
     <script src="js/pass-show-hide.js"></script>
-    <script src="js/signup.js"></script>
 
 </body>
 </html>
