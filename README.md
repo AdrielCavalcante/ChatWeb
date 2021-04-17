@@ -9,7 +9,8 @@
 #### Objetivos:
 - [x] Parte front-end.
 - [x] Ajax
-- [ ] Parte back-end.
+- [ ] Parte back-end. (Não usada aqui)
+- [ ] criptografia (Não usada aqui)
 - [x] Responsividade.
 
 #### Por enquanto é possível acessar todas as páginas. 
