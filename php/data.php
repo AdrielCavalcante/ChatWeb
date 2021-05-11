@@ -7,7 +7,7 @@ while($row = mysqli_fetch_assoc($sql)) {
     $query2 = mysqli_query($conn, $sql2);
     $row2 = mysqli_fetch_assoc($query2);
     if (mysqli_num_rows($query2) > 0) {
-        $result = $row2['msg'];
+        $result = base64_decode($row2['msg']);
         ($outgoing_id == $row2['outgoing_msg_id']) ?  $you = "Você: " : $you = "";
     } else {
         $result = "Envie uma mensagem";
@@ -25,7 +25,7 @@ while($row = mysqli_fetch_assoc($sql)) {
                 <img src="img/'. $row['image'] .'"alt="Perfil">
                 <div class="details">
                     <span>'. $row['fName']. " " . $row['lName'] .'</span>
-                    <p>'. $you . $msg .'</p>
+                    <p>'. $msg .'</p>
                 </div>
                 </div>
                 <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
