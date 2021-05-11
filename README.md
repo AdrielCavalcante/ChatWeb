@@ -8,10 +8,11 @@
 
 #### Objetivos:
 - [x] Parte front-end.
-- [x] Ajax
+- [x] Ajax.
 - [x] Parte back-end.
-- [ ] Criptografia.
+- [x] Criptografia.
 - [x] Responsividade.
+- [ ] Dark-mode.
 
 #### Por enquanto é possível acessar todas as páginas. 
 #### Caminho: Clicar no botão do login.html, clicando na área da mensagem, você tem acesso ao chat.html
