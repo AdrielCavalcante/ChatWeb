@@ -13,6 +13,8 @@
 - [x] Cryptography.
 - [x] Responsiveness.
 - [ ] Dark-mode.
+- [ ] Socket for messages.
+- [ ] Feat: Images upload in chat.
 
 #### For now it is possible to access all pages.
 #### Path: Click on the login.html button, clicking on the message area, you have access to chat.html
